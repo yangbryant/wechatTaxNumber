@@ -34,12 +34,14 @@ Page({
       success: function(res) {
         console.log(res.data);
         const taxList = that.formatTaxList(res.data);
-        console.log(taxList);
         that.setData({
           taxList,
         });
       }
     })
+  },
+  bindTap: function(event) {
+  console.log(event);
   },
   onLoad: function () {
   }

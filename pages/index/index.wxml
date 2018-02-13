@@ -3,4 +3,17 @@
   <view class="section">
     <input placeholder="" auto-focus confirm-type="search" bindconfirm="handleInput"/>
   </view>
+  <view class='hot-container'>
+    <view
+      class='hot-card'
+      wx:key="index"
+      wx:for="{{taxList}}"
+      wx:for-index="idx"
+      wx:for-item="tax">
+      <view class="text-and-price" id="{{tax.keyNo}}" bindtap="bindTap">
+        <text class="curr-price">{{tax.name}}</text>
+        <text class='prev-price'>{{tax.creditCode}}</text>
+      </view>
+    </view>
+  </view>
 </view>
