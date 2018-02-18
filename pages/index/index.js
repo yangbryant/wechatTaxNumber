@@ -38,10 +38,13 @@ Page({
           taxList,
         });
       }
-    })
+    });
   },
   bindTap: function(event) {
-  console.log(event);
+    const keyNo = event.currentTarget.id;
+    wx.navigateTo({
+      url: `../detail/detail?keyno=${keyNo}`,
+    })
   },
   onLoad: function () {
   }

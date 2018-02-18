@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='hot-container' wx:if="{{taxDetail}}">
+    <view class="text-and-price" id="{{taxDetail.keyNo}}">
+      <text class="curr-price">{{taxDetail.Name}}</text>
+      <text class='prev-price'>{{taxDetail.CreditCode}}</text>
+      <text class="curr-price">{{taxDetail.Address}}</text>
+      <text class="curr-price">{{taxDetail.PhoneNumber}}</text>
+      <text class="curr-price">{{taxDetail.Bank}}</text>
+      <text class="curr-price">{{taxDetail.Bankaccount}}</text>
+    </view>
+  </view>
+</view>

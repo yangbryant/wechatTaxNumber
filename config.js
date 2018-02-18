@@ -2,7 +2,7 @@
  * 小程序配置文件
  */
 
-var host = "http://siwhzv.natappfree.cc/api"
+var host = "http://6ne7vs.natappfree.cc/api"
 
 var config = {
 
