@@ -1,13 +1,37 @@
 <!--index.wxml-->
 <view class="container">
+  <view class='forward-tip'>
+    <view>点击右上角"转发",可将发票抬头信息分享给朋友</view>
+  </view>
   <view class='hot-container' wx:if="{{taxDetail}}">
-    <view class="text-and-price" id="{{taxDetail.keyNo}}">
-      <text class="curr-price">{{taxDetail.Name}}</text>
-      <text class='prev-price'>{{taxDetail.CreditCode}}</text>
-      <text class="curr-price">{{taxDetail.Address}}</text>
-      <text class="curr-price">{{taxDetail.PhoneNumber}}</text>
-      <text class="curr-price">{{taxDetail.Bank}}</text>
-      <text class="curr-price">{{taxDetail.Bankaccount}}</text>
+    <view class="hot-detail" id="{{taxDetail.keyNo}}">
+      <view class="detail-view">
+        <text class='detail-title'>名称</text>
+        <text class='detail-content'>{{taxDetail.Name}}</text>
+      </view>
+      <view class="detail-view">
+        <text class='detail-title'>税号</text>
+        <text class='detail-content'>{{taxDetail.CreditCode}}</text>
+      </view>
+      <view class="detail-view">
+        <text class='detail-title'>单位地址</text>
+        <text class='detail-content'>{{taxDetail.Address}}</text>
+      </view>
+      <view class="detail-view">
+        <text class='detail-title'>电话号码</text>
+        <text class='detail-content'>{{taxDetail.PhoneNumber}}</text>
+      </view>
+      <view class="detail-view">
+        <text class='detail-title'>开户银行</text>
+        <text class='detail-content'>{{taxDetail.Bank}}</text>
+      </view>
+      <view class="detail-view">
+        <text class='detail-title'>银行账户</text>
+        <text class='detail-content'>{{taxDetail.Bankaccount}}</text>
+      </view>
+    </view>
+    <view class='hot-save' id="hot-save">
+      <view>1111</view>
     </view>
   </view>
 </view>

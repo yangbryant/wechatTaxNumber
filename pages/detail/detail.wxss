@@ -1,0 +1,69 @@
+.container{
+  background: #54a848;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.forward-tip {
+  position: relative;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.forward-tip view {
+  flex: 1;
+  color: #ffffff;
+  font-size: 24rpx;
+  font-weight:150;
+  text-align: center;
+}
+
+.hot-container {
+  background: #ffffff;
+  flex: 1;
+  border-radius: 10rpx 10rpx 10rpx 10rpx;
+  margin: 0rpx 30rpx 100rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hot-container .hot-detail {
+  flex: 1;
+  background: transparent;
+  margin: 40rpx 30rpx 0rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hot-container .hot-detail .detail-view {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hot-container .hot-detail .detail-view .detail-title {
+  text-align: left;
+  color: #808080;
+  font-size: 30rpx;
+}
+
+.hot-container .hot-detail .detail-view .detail-content {
+  text-align: right;
+  color: #080808;
+  font-size: 30rpx;
+}
+
+.hot-container .hot-save {
+  flex: 1;
+  margin: 50rpx 30rpx;
+  background: transparent;
+}
