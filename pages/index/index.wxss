@@ -52,12 +52,14 @@
 
 .hot-card .tax-name-and-creditcode .tax-name{
   flex: 1;
+  margin-bottom: 10rpx;
   font-size: 28rpx;
   padding-left: 24rpx;
   color: #080808;
 }
 .hot-card .tax-name-and-creditcode .tax-creditcode{
   flex: 1;
+  margin-top: 10rpx;
   font-size: 24rpx;
   padding-left: 24rpx;
   color: #808080;

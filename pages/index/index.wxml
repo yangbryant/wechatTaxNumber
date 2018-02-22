@@ -11,12 +11,12 @@
       wx:for-index="idx"
       wx:for-item="tax">
       <view class="tax-name-and-creditcode" id="{{tax.keyNo}}" bindtap="bindTap">
-        <text class="tax-name">{{tax.name}}\n</text>
-        <text class='tax-creditcode'>税号: {{tax.creditCode}}</text>
+        <view class="tax-name">{{tax.name}}</view>
+        <view class='tax-creditcode'>税号: {{tax.creditCode}}</view>
       </view>
     </view>
     <view class="tax-empty" wx:if="{{taxList.length == 0}}">
-      <text class="tax-empty-text">{{emptyStr}}</text>
+      <view class="tax-empty-text">{{emptyStr}}</view>
     </view>
   </view>
 </view>
