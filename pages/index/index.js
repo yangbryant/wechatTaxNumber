@@ -6,6 +6,7 @@ const queryTaxUrl = require('../../config.js').queryTaxUrl;
 Page({
   data: {
     taxList: [],
+    emptyStr: '欢迎使用查询税号小程序!',
   },
   formatTaxList(taxList) {
     const formatedTaxList = [];
@@ -37,8 +38,10 @@ Page({
       success: function(res) {
         console.log(res.data);
         const taxList = that.formatTaxList(res.data);
+        const emptyStr = taxList.length === 0 ? '暂无数据' : '';
         that.setData({
           taxList,
+          emptyStr,
         });
         wx.hideLoading();
       },

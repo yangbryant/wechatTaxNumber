@@ -16,7 +16,7 @@
       </view>
     </view>
     <view class="tax-empty" wx:if="{{taxList.length == 0}}">
-      <text>暂无数据</text>
+      <text class="tax-empty-text">{{emptyStr}}</text>
     </view>
   </view>
 </view>
