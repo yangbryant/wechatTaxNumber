@@ -24,6 +24,9 @@ Page({
     console.log(event.detail);
     const url = `${queryTaxUrl}?key=${event.detail.value}`;
     const that = this;
+    wx.showLoading({
+      title: '正在搜索...',
+    });
     wx.request({
       url: url,
       data: {},
@@ -36,6 +39,12 @@ Page({
         const taxList = that.formatTaxList(res.data);
         that.setData({
           taxList,
+        });
+        wx.hideLoading();
+      },
+      fail: function(res) {
+        wx.showToast({
+          title: '搜索失败',
         });
       }
     });

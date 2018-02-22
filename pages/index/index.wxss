@@ -50,18 +50,26 @@
   justify-content: space-around;
 }
 
-.hot-card .tax-name{
+.hot-card .tax-name-and-creditcode .tax-name{
   flex: 1;
   font-size: 28rpx;
   padding-left: 24rpx;
   color: #080808;
 }
-.hot-card .tax-creditcode{
+.hot-card .tax-name-and-creditcode .tax-creditcode{
   flex: 1;
   font-size: 24rpx;
   padding-left: 24rpx;
   color: #808080;
 }
-.hot-card .tax-empty{
-
+.hot-container .tax-empty{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hot-container .tax-empty text{
+  flex: 1;
+  font-size: 30rpx;
+  color: #808080;
+  text-align: center;
 }
