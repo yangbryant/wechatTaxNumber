@@ -1,5 +1,67 @@
 /**index.wxss**/
+.container{
+  background: #efefef;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
 .section{
-  margin-top: 10rpx;
-  background-color: #aaa;
+  position: relative;
+  height: 80rpx;
+  margin: 5rpx 20rpx;
+  padding: 0 0;
+  background: transparent;
+  z-index: 99;
+}
+
+.section input{
+  border: 4rpx solid #54a848;
+  border-radius: 10rpx;
+  background: #ffffff;
+  left: 10rpx;
+  right: 10rpx;
+  height: 76rpx;
+  padding-left: 26rpx;
+  font-size: 30rpx;
+}
+
+.hot-container{
+  position: relative;
+  background: #efefef;
+  flex: 1;
+  z-index: 0;
+}
+
+.hot-card{
+  background: #ffffff;
+  border-radius: 10rpx 10rpx 10rpx 10rpx;
+  height: 140rpx;
+  margin: 20rpx 20rpx;
+  border-width : 10rpx;
+	border-left-style : solid;
+	border-left-color : #54a848;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.hot-card .tax-name{
+  flex: 1;
+  font-size: 28rpx;
+  padding-left: 24rpx;
+  color: #080808;
+}
+.hot-card .tax-creditcode{
+  flex: 1;
+  font-size: 24rpx;
+  padding-left: 24rpx;
+  color: #808080;
+}
+.hot-card .tax-empty{
+
 }

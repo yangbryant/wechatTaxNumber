@@ -5,9 +5,9 @@
   ],
   "window":{
     "navigationBarTextStyle":"black",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8",
-    "navigationBarTitleText": "查询税号"
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "查询税号",
+    "backgroundColor": "#efefef"
   },
   "networkTimeout": {
     "request": 10000,

@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view class="section">
-    <input placeholder="" auto-focus confirm-type="search" bindconfirm="handleInput"/>
+    <input placeholder="请输入您要搜索的内容..." auto-focus confirm-type="search" bindconfirm="handleInput"/>
   </view>
   <view class='hot-container'>
     <view
@@ -11,9 +11,12 @@
       wx:for-index="idx"
       wx:for-item="tax">
       <view class="text-and-price" id="{{tax.keyNo}}" bindtap="bindTap">
-        <text class="curr-price">{{tax.name}}</text>
-        <text class='prev-price'>{{tax.creditCode}}</text>
+        <text class="tax-name">{{tax.name}}\n</text>
+        <text class='tax-creditcode'>税号: {{tax.creditCode}}</text>
       </view>
+    </view>
+    <view class="tax-empty" wx:if="{{taxList.length == 0}}">
+      1111
     </view>
   </view>
 </view>
