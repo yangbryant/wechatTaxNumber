@@ -36,7 +36,10 @@
       <view class='placeholder-circle-right'></view>
     </view>
     <view class='hot-save' id="hot-save">
-      <view></view>
+      <image class='detail-qrcode' mode='aspectFit' src="{{taxDetail.imgdata}}"></image>
+      <view class='tip-qrcode'>
+        <view>识别图中二维码,显示发票抬头信息</view>
+      </view>
     </view>
   </view>
 </view>

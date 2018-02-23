@@ -100,5 +100,21 @@
   flex: 1;
   margin: 40rpx 30rpx 40rpx 30rpx;
   background: transparent;
-  /* background: #00ffff; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hot-container .hot-save .detail-qrcode {
+  height: 300rpx;
+  width: 300rpx;
+}
+
+.hot-container .hot-save .tip-qrcode view {
+  flex: 1;
+  color: #808080;
+  font-size: 24rpx;
+  font-weight:120;
+  text-align: center;
 }
