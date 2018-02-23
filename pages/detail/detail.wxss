@@ -59,7 +59,7 @@
 .hot-container .hot-detail .detail-view .detail-content {
   text-align: right;
   color: #080808;
-  font-size: 30rpx;
+  font-size: 28rpx;
 }
 
 .hot-container .placeholder-view {
