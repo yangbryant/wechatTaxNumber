@@ -4,7 +4,7 @@
     <view>点击右上角"转发",可将发票抬头信息分享给朋友</view>
   </view>
   <view class='hot-container' wx:if="{{taxDetail}}">
-    <view class="hot-detail" id="{{taxDetail.keyNo}}">
+    <view class="hot-detail" id="{{taxDetail.keyNo}}" bindlongpress='bindlongpress'>
       <view class="detail-view">
         <text class='detail-title'>名称</text>
         <text class='detail-content'>{{taxDetail.Name}}</text>
@@ -30,8 +30,13 @@
         <text class='detail-content'>{{taxDetail.Bankaccount}}</text>
       </view>
     </view>
+    <view class="placeholder-view">
+      <view class='placeholder-circle-left'></view>
+      <view class='placeholder-line'></view>
+      <view class='placeholder-circle-right'></view>
+    </view>
     <view class='hot-save' id="hot-save">
-      <view>1111</view>
+      <view></view>
     </view>
   </view>
 </view>

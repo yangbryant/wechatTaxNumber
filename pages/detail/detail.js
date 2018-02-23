@@ -14,8 +14,20 @@ Page({
       Bankaccount: "15392401040000404"
     }
   },
-  formatTaxDetail(taxDetail) {
+  formatTaxDetail: function(taxDetail) {
     return taxDetail;
+  },
+  bindlongpress: function(event) {
+    const taxDetail = this.data.taxDetail;
+    const data = `名称:${taxDetail.Name}\n税号:${taxDetail.CreditCode}\n单位地址:${taxDetail.Address}\n电话号码:${taxDetail.PhoneNumber}\n开户银行:${taxDetail.Bank}\n银行账户:${taxDetail.Bankaccount}`;
+    wx.setClipboardData({
+      data: data,
+      success: function(res) {
+        wx.showToast({
+          title: '已复制到粘贴板',
+        })
+      }
+    });
   },
   onLoad: function(option) {
     // console.log(option.keyno);
