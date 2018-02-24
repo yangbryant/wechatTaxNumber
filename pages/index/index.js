@@ -8,7 +8,7 @@ Page({
     taxList: [],
     emptyStr: '欢迎使用查询税号小程序!',
   },
-  formatTaxList(taxList) {
+  formatTaxList: function(taxList) {
     const formatedTaxList = [];
     for (let i = 0; i < taxList.length; i += 1) {
 
