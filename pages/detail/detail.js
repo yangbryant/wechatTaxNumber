@@ -6,7 +6,16 @@ Page({
   data: {
     taxDetail: null,
   },
+  fixEmptyString: function(str, placeholder) {
+    str = str === '' ? placeholder : str;
+    str = str === null ? placeholder : str;
+    return str;
+  },
   formatTaxDetail: function(taxDetail) {
+    taxDetail.Address = this.fixEmptyString(taxDetail.Address, "暂无数据");
+    taxDetail.PhoneNumber = this.fixEmptyString(taxDetail.PhoneNumber, "暂无数据");
+    taxDetail.Bank = this.fixEmptyString(taxDetail.Bank, "暂无数据");
+    taxDetail.Bankaccount = this.fixEmptyString(taxDetail.Bankaccount, "暂无数据");
     return taxDetail;
   },
   bindlongpress: function(event) {

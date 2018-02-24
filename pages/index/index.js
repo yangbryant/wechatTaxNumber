@@ -8,8 +8,17 @@ Page({
     taxList: [],
     emptyStr: '欢迎使用查询税号小程序!',
   },
+  isArray: function(obj) {
+    if(Array.isArray) {
+      return Array.isArray(obj);
+    } else {
+      return Object.prototype.toString.call(obj) === "[object Array]";
+    }
+  },
   formatTaxList: function(taxList) {
     const formatedTaxList = [];
+    if (this.isArray(taxList) === false) return formatedTaxList;
+
     for (let i = 0; i < taxList.length; i += 1) {
 
       const keyNo = taxList[i].KeyNo;
@@ -37,13 +46,19 @@ Page({
       },
       success: function(res) {
         console.log(res.data);
-        const taxList = that.formatTaxList(res.data);
-        const emptyStr = taxList.length === 0 ? '暂无数据' : '';
-        that.setData({
-          taxList,
-          emptyStr,
-        });
-        wx.hideLoading();
+        if (res.statusCode === 200) {
+          const taxList = that.formatTaxList(res.data);
+          const emptyStr = taxList.length === 0 ? '暂无数据' : '';
+          that.setData({
+            taxList,
+            emptyStr,
+          });
+          wx.hideLoading();
+        } else {
+          wx.showToast({
+            title: '网络异常',
+          });
+        }
       },
       fail: function(res) {
         wx.showToast({
