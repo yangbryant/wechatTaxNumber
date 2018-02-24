@@ -9,6 +9,7 @@ Page({
   fixEmptyString: function(str, placeholder) {
     str = str === '' ? placeholder : str;
     str = str === null ? placeholder : str;
+    str = str === 'null' ? placeholder : str;
     return str;
   },
   formatTaxDetail: function(taxDetail) {
