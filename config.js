@@ -2,7 +2,7 @@
  * 小程序配置文件
  */
 
-var host = "http://6ne7vs.natappfree.cc/api"
+var host = "https://muller.youdan.co/api"
 
 var config = {
 
