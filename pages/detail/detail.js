@@ -20,9 +20,13 @@ Page({
     return taxDetail;
   },
   hometap: function(event) {
-    wx.reLaunch({
-      url: '../index/index'
-    })
+    if (getCurrentPages().length > 1) {
+      wx.navigateBack();
+    } else {
+      wx.reLaunch({
+        url: '../index/index'
+      });
+    }
   },
   bindlongpress: function(event) {
     const taxDetail = this.data.taxDetail;
