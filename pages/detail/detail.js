@@ -19,6 +19,11 @@ Page({
     taxDetail.Bankaccount = this.fixEmptyString(taxDetail.Bankaccount, "暂无数据");
     return taxDetail;
   },
+  hometap: function(event) {
+    wx.reLaunch({
+      url: '../index/index'
+    })
+  },
   bindlongpress: function(event) {
     const taxDetail = this.data.taxDetail;
     const data = `名称:${taxDetail.Name}\n税号:${taxDetail.CreditCode}\n单位地址:${taxDetail.Address}\n电话号码:${taxDetail.PhoneNumber}\n开户银行:${taxDetail.Bank}\n银行账户:${taxDetail.Bankaccount}`;

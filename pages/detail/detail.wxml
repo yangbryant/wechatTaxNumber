@@ -42,4 +42,8 @@
       </view>
     </view>
   </view>
+  <view class='return-home' bindtap='hometap'>
+    <image src='/assets/home.png'></image>
+    <view>回到主页</view>
+  </view>
 </view>

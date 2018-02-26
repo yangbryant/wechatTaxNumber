@@ -29,7 +29,7 @@
   background: #ffffff;
   flex: 1;
   border-radius: 10rpx 10rpx 10rpx 10rpx;
-  margin: 0rpx 30rpx 100rpx 30rpx;
+  margin: 0rpx 30rpx 10rpx 30rpx;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -116,5 +116,28 @@
   color: #808080;
   font-size: 24rpx;
   font-weight:120;
+  text-align: center;
+}
+
+.return-home {
+  position: relative;
+  height: 60rpx;
+  margin: 0rpx 0rpx 20rpx 0rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.return-home image {
+  height: 35rpx;
+  width: 35rpx;
+}
+
+.return-home view {
+  color: #ffffff;
+  margin-left: 10rpx;
+  font-size: 30rpx;
+  font-weight:150;
   text-align: center;
 }
